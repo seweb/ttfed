@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+// import ui components styles
+@import '@/shared/components/ui/ui.scss';
+
+#app {
+  max-width: 100%;
+  width: 100%;
+  padding: 0;
+  min-height: 100vh;
+  text-align: left;
+}
+
+.router-link-exact-active {
+  @apply bg-gray-900 text-white;
+}
