@@ -1,8 +1,8 @@
 <script setup>
 import { reactive, defineEmits } from 'vue'
 import Button from '@/shared/components/ui/button/Button.vue'
-import InputItem from '@/shared/components/ui/InputItem.vue'
-import Header from './Header.vue'
+import InputItem from '@/shared/components/ui/inputItem/InputItem.vue'
+import Header from '../header/Header.vue'
 
 // const emit = defineEmits(['submit'])
 
@@ -20,13 +20,19 @@ import Header from './Header.vue'
 <template>
   <div class="widget max-w-screen-lg border-1">
     <Header />
-    <div class="input-wrapper">
+    <div class="input-wrapper px-4 pt-2 pb-2">
       <InputItem
-        class="border border-gray-300 rounded-md py-2 px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent mb-3"
+        class="input-item"
         type="text"
-        :placeholder="'Search'"
+        :placeholder="'Search...'"
         v-model="inputValue"
+        :searchIcon="true"
       />
+    </div>
+    <div class="tabs px-4 pt-3 pb-3">
+      <Button class="btn" type="button" text="All" value="22" active="false" />
+      <Button class="btn active" type="button" text="On leave" value="15" active="true" />
+      <Button class="btn" type="button" text="Holidays" value="12" active="true" />
     </div>
   </div>
 </template>

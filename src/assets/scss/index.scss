@@ -5,6 +5,9 @@
 // import ui components styles
 @import '@/shared/components/ui/ui.scss';
 
+// import module components
+@import '@/modules/widget/widget.scss';
+
 @import './general.scss';
 @import './typography.scss';
 
@@ -14,8 +17,4 @@
   padding: 0;
   min-height: 100vh;
   text-align: left;
-}
-
-.router-link-exact-active {
-  @apply bg-gray-900 text-white;
 }

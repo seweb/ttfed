@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue'
-import Widget from '../components/Widget.vue'
+import Widget from '../components/widget/Widget.vue'
 import Button from '@/shared/components/ui/button/Button.vue'
 const onSubmit = (form) => {
   console.log('forData', form)

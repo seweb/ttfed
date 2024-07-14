@@ -20,6 +20,9 @@ export default {
           dark: {
             80: '#6C869F'
           }
+        },
+        dynamic: {
+          primary: '#2C8DFF'
         }
       },
       fontFamily: {

@@ -1,17 +1,17 @@
 <script setup>
-import { useUserStore } from '@/stores/user';
-import { useCartStore } from '@/stores/cart';
+import { useUserStore } from '@/stores/user'
+import { useCartStore } from '@/stores/cart'
 
-const userStore = useUserStore();
-const cartStore = useCartStore();
+const userStore = useUserStore()
+const cartStore = useCartStore()
 
 const login = () => {
-  userStore.setUserInfo({ name: 'John Doe' });
-};
+  userStore.setUserInfo({ name: 'John Doe' })
+}
 
 const addItemToCart = () => {
-  cartStore.addItem({ name: 'New Item' });
-};
+  cartStore.addItem({ name: 'New Item' })
+}
 </script>
 
 <template>
@@ -21,10 +21,7 @@ const addItemToCart = () => {
       <p class="mb-4" v-if="userStore.userInfo?.name">
         {{ userStore.userInfo.name }}
       </p>
-      <button
-        @click="login"
-        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
-      >
+      <button @click="login" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
         Login
       </button>
 

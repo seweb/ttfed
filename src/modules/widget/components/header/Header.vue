@@ -1,6 +1,6 @@
 <script setup>
-import HeaderIcon from '@/shared/assets/images/icons/HeaderIcon.vue'
-import CloseIcon from '@/shared/assets/images/icons/CloseIcon.vue'
+import HeaderIcon from '@/assets/images/components/HeaderIcon.vue'
+import CloseIcon from '@/assets/images/components/CloseIcon.vue'
 </script>
 <template>
   <header class="flex justify-between items-center py-3 px-4">

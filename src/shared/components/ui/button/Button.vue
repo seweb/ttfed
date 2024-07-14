@@ -1,13 +1,5 @@
 <script setup>
-import { defineProps, defineEmits } from 'vue';
-
-// interface ButtonProps {
-//   class: string
-//   type: 'button' | 'submit' | 'reset' | undefined
-//   disabled?: boolean
-//   text: string
-//   isLoading?: boolean
-// }
+import { defineProps, defineEmits } from 'vue'
 
 const props = defineProps({
   class: String,
@@ -16,13 +8,11 @@ const props = defineProps({
     default: 'button'
   },
   disabled: Boolean,
-  text: String
-});
+  text: String,
+  value: Number
+})
 
-// const emit = defineEmits<{
-//   (e: 'submit'): void
-// }>()
-const emits = defineEmits(['submit']);
+const emits = defineEmits(['submit'])
 </script>
 
 <template>
@@ -32,7 +22,8 @@ const emits = defineEmits(['submit']);
     :disabled="props.disabled"
     @submit="emit('submit')"
   >
-    <span class="button-text">{{ props.text }}</span>
+    <span class="btn-text">{{ props.text }}</span>
+    <span class="btn-value">{{ props.value }}</span>
   </button>
 </template>
 
