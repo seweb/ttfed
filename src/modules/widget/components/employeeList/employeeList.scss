@@ -1,0 +1,40 @@
+.employee-list {
+  overflow-y: auto;
+  position: relative;
+  height: 370px; /* Adjust as needed */
+}
+
+.employee-list-content {
+  overflow-y: scroll;
+  height: 100%;
+  padding-right: 5px; /* Adjust as needed to prevent content overflow */
+}
+
+/* WebKit Browsers */
+.employee-list-content::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.employee-list-content::-webkit-scrollbar-track {
+  background: #fff; /* Track background */
+}
+
+.employee-list-content::-webkit-scrollbar-thumb {
+  background: #fff; /* Scrollbar thumb color */
+  border-radius: 10px; /* Scrollbar thumb rounded corners */
+}
+
+.employee-list-content::-webkit-scrollbar-thumb:hover {
+  background: #fff; /* Scrollbar thumb hover color */
+}
+
+/* Firefox */
+.employee-list-content {
+  scrollbar-width: thin; /* Width of the scrollbar */
+  scrollbar-color: #dce5ef #fff; /* Scrollbar thumb and track color */
+}
+
+/* For Edge and IE */
+.employee-list-content {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}

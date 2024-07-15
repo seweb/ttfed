@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         body: '#0085FF29',
+        border: '#dce5ef',
         main: {
           white: '#FFFFFF',
           black: '#000F30'
@@ -29,6 +30,7 @@ export default {
         inter: ['Inter', 'sans-serif']
       },
       fontSize: {
+        12: '12px',
         14: '14px'
       }
     }
