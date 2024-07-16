@@ -3,7 +3,7 @@ import './header.scss'
 
 export default {
   title: 'Header',
-  component: Button,
+  component: Header,
   argTypes: {}
 }
 

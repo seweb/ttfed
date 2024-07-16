@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 import Employee from '../employee/Employee.vue'
 import { perPage } from '@/constants/settings'
 
@@ -26,8 +26,11 @@ const handleScroll = () => {
 
 onMounted(() => {
   loadItems()
+
   const container = document.querySelector('.employee-list-content')
-  container.addEventListener('scroll', handleScroll)
+  if (container) {
+    container.addEventListener('scroll', handleScroll)
+  }
 
   onUnmounted(() => {
     container.removeEventListener('scroll', handleScroll)
