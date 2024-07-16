@@ -1,12 +1,9 @@
 <script setup>
-import { ref } from 'vue'
 import LeaveIcon from '@/assets/images/components/LeaveIcon.vue'
 
 const props = defineProps({
   item: Object
 })
-
-//console.log('item', item)
 </script>
 <template>
   <div class="employee">

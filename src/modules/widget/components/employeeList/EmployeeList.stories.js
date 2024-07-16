@@ -1,9 +1,9 @@
-import Tabs from './Tabs.vue'
-import './tabs.scss'
+import EmployeeList from './EmployeeList.vue'
+import './employeeList.scss'
 
 export default {
-  title: 'Tabs',
-  component: Button,
+  title: 'EmployeeList',
+  component: EmployeeList,
   argTypes: {}
 }
 
@@ -12,5 +12,5 @@ const Template = (args) => ({
   setup() {
     return { args }
   },
-  template: '<Tabs v-bind="args" />'
+  template: '<EmployeeList v-bind="args" />'
 })

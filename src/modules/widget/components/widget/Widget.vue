@@ -1,16 +1,15 @@
 <script setup>
-import { ref, reactive, defineEmits, computed, nextTick } from 'vue'
-import Button from '@/shared/components/ui/button/Button.vue'
+import { ref, computed, nextTick } from 'vue'
 import InputItem from '@/shared/components/ui/inputItem/InputItem.vue'
 import Header from '../header/Header.vue'
 import Tabs from '../tabs/Tabs.vue'
 import EmployeeList from '../employeeList/EmployeeList.vue'
 import { employees } from '@/utils/employees'
+import debounce from '@/utils/debounce'
 
 const searchQuery = ref('')
 const listEmployees = ref([...employees])
-
-console.log('employees', employees)
+const leaveType = ref('all')
 
 const allCount = computed(() => employees.length)
 const onLeaveCount = computed(
@@ -22,7 +21,8 @@ const onHolidayCount = computed(
 
 const handleTabClicked = (type) => {
   listEmployees.value = []
-  //searchQuery.value = ''
+  leaveType.value = type
+  searchQuery.value = ''
   setTimeout(() => {
     if (type === 'all') {
       listEmployees.value = [...employees]
@@ -32,25 +32,27 @@ const handleTabClicked = (type) => {
   }, 300)
 }
 
-const searchEmployee = async (event) => {
-  const searchValue = event.target.value.toLowerCase()
-  console.log('event', searchValue)
-  const filtered = employees.filter((item) => {
-    return item.employee.firstName.toLowerCase().includes(searchValue.toLowerCase())
-  })
-  console.log('filtered', filtered)
-
+const searchEmployee = async () => {
+  let filtered = []
+  if (leaveType.value === 'all') {
+    filtered = employees.filter((item) => {
+      const name = item.employee.firstName + item.employee.lastName
+      return name.toLowerCase().includes(searchQuery.value.toLowerCase())
+    })
+  } else {
+    filtered = employees.filter((item) => {
+      const name = item.employee.firstName + item.employee.lastName
+      return (
+        name.toLowerCase().includes(searchQuery.value.toLowerCase()) &&
+        item.leaveRequestType === leaveType.value
+      )
+    })
+  }
   listEmployees.value = []
-
   await nextTick()
   listEmployees.value = filtered
-
-  //listEmployees.value = []
-  // setTimeout(() => {
-  //   listEmployees.value = []
-  //   listEmployees.value = [...filtered]
-  // }, 0)
 }
+const debouncedSearchEmployee = debounce(searchEmployee, 500)
 </script>
 
 <template>
@@ -61,8 +63,8 @@ const searchEmployee = async (event) => {
         class="input-item"
         type="text"
         :placeholder="'Search...'"
-        :value="searchQuery"
-        @input="searchEmployee"
+        v-model="searchQuery"
+        @input="debouncedSearchEmployee"
       />
     </div>
     <Tabs

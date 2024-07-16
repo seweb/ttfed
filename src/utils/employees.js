@@ -1,33 +1,3 @@
-// export const employees = [
-//   {
-//     employee: {
-//       firstName: 'Elizabeth ',
-//       lastName: 'Wilkins',
-//       avatar: 'https://via.placeholder.com/600/92c952',
-//       position: 'Full-stack developer',
-//       team: '',
-//       department: '',
-//       division: '',
-//       location: 'Ukraine'
-//     },
-//     leaveRequestEndDate: '22.07.2024',
-//     leaveRequestType: 'leave'
-//   },
-//   {
-//     employee: {
-//       firstName: 'Celia  ',
-//       lastName: 'Mccoy',
-//       avatar: 'https://via.placeholder.com/600/f66b97',
-//       position: 'Reliability engineer',
-//       team: '',
-//       department: '',
-//       division: '',
-//       location: 'Germany'
-//     },
-//     leaveRequestEndDate: '22.08.2024',
-//     leaveRequestType: 'holiday'
-//   }
-// ]
 export const employees = [
   {
     employee: {
@@ -35,10 +5,7 @@ export const employees = [
       lastName: 'Wilkins',
       avatar: 'https://via.placeholder.com/600/92c952',
       position: 'Full-stack developer',
-      team: 'Development',
-      department: 'Engineering',
-      division: 'Technology',
-      location: 'Ukraine'
+      team: 'Development'
     },
     leaveRequestEndDate: '22.07.2024',
     leaveRequestType: 'leave'
@@ -48,11 +15,7 @@ export const employees = [
       firstName: 'Celia',
       lastName: 'Mccoy',
       avatar: 'https://via.placeholder.com/600/f66b97',
-      position: 'Reliability engineer',
-      team: 'Operations',
-      department: 'Engineering',
-      division: 'Technology',
-      location: 'Germany'
+      position: 'Reliability engineer'
     },
     leaveRequestEndDate: '22.08.2024',
     leaveRequestType: 'holiday'
@@ -62,7 +25,6 @@ export const employees = [
       firstName: 'John',
       lastName: 'Doe',
       avatar: 'https://via.placeholder.com/600/771796',
-      position: 'Project manager',
       team: 'Management',
       department: 'Operations',
       division: 'Business',

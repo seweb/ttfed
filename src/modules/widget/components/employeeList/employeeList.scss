@@ -1,37 +1,37 @@
 .employee-list {
   overflow-y: auto;
   position: relative;
-  height: 370px; /* Adjust as needed */
+  height: 370px;
 }
 
 .employee-list-content {
   overflow-y: scroll;
   height: 100%;
-  padding-right: 5px; /* Adjust as needed to prevent content overflow */
+  padding-right: 5px;
 }
 
 /* WebKit Browsers */
 .employee-list-content::-webkit-scrollbar {
-  width: 8px; /* Width of the scrollbar */
+  width: 8px;
 }
 
 .employee-list-content::-webkit-scrollbar-track {
-  background: #fff; /* Track background */
+  background: #fff;
 }
 
 .employee-list-content::-webkit-scrollbar-thumb {
-  background: #fff; /* Scrollbar thumb color */
-  border-radius: 10px; /* Scrollbar thumb rounded corners */
+  background: #fff;
+  border-radius: 10px;
 }
 
 .employee-list-content::-webkit-scrollbar-thumb:hover {
-  background: #fff; /* Scrollbar thumb hover color */
+  background: #fff;
 }
 
 /* Firefox */
 .employee-list-content {
-  scrollbar-width: thin; /* Width of the scrollbar */
-  scrollbar-color: #dce5ef #fff; /* Scrollbar thumb and track color */
+  scrollbar-width: thin;
+  scrollbar-color: #dce5ef #fff;
 }
 
 /* For Edge and IE */

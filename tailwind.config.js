@@ -39,15 +39,3 @@ export default {
     extend: {}
   }
 }
-
-{
-  /* <div class="font-inter font-thin">Thin (100)</div>
-<div class="font-inter font-extralight">Extralight (200)</div>
-<div class="font-inter font-light">Light (300)</div>
-<div class="font-inter font-normal">Normal (400)</div>
-<div class="font-inter font-medium">Medium (500)</div>
-<div class="font-inter font-semibold">Semibold (600)</div>
-<div class="font-inter font-bold">Bold (700)</div>
-<div class="font-inter font-extrabold">Extrabold (800)</div>
-<div class="font-inter font-black">Black (900)</div> */
-}

@@ -3,7 +3,7 @@ import './employee.scss'
 
 export default {
   title: 'Employee',
-  component: Button,
+  component: Employee,
   argTypes: {}
 }
 
