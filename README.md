@@ -1,5 +1,3 @@
-# test
-
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
@@ -32,4 +30,16 @@ npm run build
 
 ```sh
 npm run lint
+```
+
+### Run unit tests
+
+```sh
+npm run test:unit
+```
+
+### Run storybook
+
+```sh
+npm storybook
 ```

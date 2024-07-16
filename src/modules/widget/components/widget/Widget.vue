@@ -60,16 +60,16 @@ const debouncedSearchEmployee = debounce(searchEmployee, 500)
     <Header />
     <div class="input-wrapper px-4 pt-2 pb-2">
       <InputItem
+        v-model="searchQuery"
         class="input-item"
         type="text"
         :placeholder="'Search...'"
-        v-model="searchQuery"
         @input="debouncedSearchEmployee"
       />
     </div>
     <Tabs
-      :leaveAmount="{ allCount, onLeaveCount, onHolidayCount }"
-      @onTabClicked="handleTabClicked"
+      :leave-amount="{ allCount, onLeaveCount, onHolidayCount }"
+      @on-tab-clicked="handleTabClicked"
     />
     <transition name="fade">
       <div v-if="listEmployees.length">

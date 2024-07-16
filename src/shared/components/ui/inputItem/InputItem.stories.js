@@ -17,16 +17,6 @@ export default {
   }
 }
 
-// class: String,
-//   placeholder: String,
-//   type: {
-//     validator: (value) => ['text', 'number'].includes(value),
-//     default: 'text'
-//   },
-//   modelValue: {
-//     type: [String, Number]
-//   }
-
 const Template = (args) => ({
   components: { InputItem },
   setup() {
@@ -41,11 +31,3 @@ Primary.args = {
   type: 'text',
   text: 'Search...'
 }
-
-// export const Disabled = Template.bind({});
-// Disabled.args = {
-//   class: 'btn',
-//   type: 'button',
-//   disabled: true,
-//   text: 'Disabled Button'
-// };

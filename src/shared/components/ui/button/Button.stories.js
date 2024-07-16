@@ -1,5 +1,5 @@
-import Button from './Button.vue';
-import './button.scss';
+import Button from './Button.vue'
+import './button.scss'
 
 export default {
   title: 'Button',
@@ -18,28 +18,28 @@ export default {
       control: { type: 'text' }
     }
   }
-};
+}
 
 const Template = (args) => ({
   components: { Button },
-  setup () {
-    return { args };
+  setup() {
+    return { args }
   },
   template: '<Button v-bind="args" />'
-});
+})
 
-export const Primary = Template.bind({});
+export const Primary = Template.bind({})
 Primary.args = {
   class: 'btn',
   type: 'submit',
   disabled: false,
   text: 'Submit Form'
-};
+}
 
-export const Disabled = Template.bind({});
+export const Disabled = Template.bind({})
 Disabled.args = {
   class: 'btn',
   type: 'button',
   disabled: true,
   text: 'Disabled Button'
-};
+}
